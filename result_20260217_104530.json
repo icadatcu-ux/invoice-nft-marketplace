@@ -1,0 +1,31 @@
+{
+  "invoice_file": "sample_invoice.pdf",
+  "document_hash": "a01e837219b8cf3f556f6c797736680426e61fb35f26980a194d39645b4c9bb9",
+  "transaction_hash": "34ba35a6880bcc7c8b92f3dbb5d3b705cf165f53f628a627d4563dde0c1aaf37",
+  "contract_address": "0xfde796D7E133A61636eD51f1e2F145C35b28617b",
+  "network": "BSC Testnet",
+  "analysis": {
+    "supplier_name": "Company Name",
+    "invoice_number": "INV-001",
+    "date": "[DD/MM/YYYY]",
+    "total_amount": "$XXX",
+    "currency": "$",
+    "vat_amount": "$XX",
+    "line_items": [
+      {
+        "description": "Service / Product description",
+        "quantity": 1,
+        "unit_price": "$XXX",
+        "total": "$XXX"
+      }
+    ],
+    "potential_issues": [
+      "Missing actual date. Placeholder '[DD/MM/YYYY]' used.",
+      "Missing actual amounts. Placeholder '$XXX' and '$XX' used extensively.",
+      "VAT amount is ambiguous. The invoice only mentions 'Tax (if applicable)' which could represent VAT or other taxes.",
+      "Placeholder values need to be replaced with real data for the invoice to be valid."
+    ]
+  },
+  "timestamp": "2026-02-17T10:45:30.394939",
+  "mode": "LIVE"
+}

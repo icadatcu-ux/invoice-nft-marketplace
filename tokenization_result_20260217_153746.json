@@ -1,0 +1,37 @@
+{
+  "invoice_file": "test_invoice_20260217_105225.pdf",
+  "document_hash": "44e18fc8ae826cc37a55ed113afff18a751b94676d124e4c296705efad509f74",
+  "transaction_hash": "0x3434653138666338616538323663633337613535656431313361666666313861",
+  "contract_address": "MOCK_MODE",
+  "network": "BSC Testnet",
+  "analysis": {
+    "supplier_name": "Test Company Inc",
+    "invoice_number": "INV-20260217105225-6146",
+    "date": "2026-02-17",
+    "total_amount": 647.0,
+    "currency": "USD",
+    "vat_amount": null,
+    "line_items": [
+      {
+        "description": "Test Service",
+        "quantity": null,
+        "unit_price": 315.0,
+        "total": null
+      },
+      {
+        "description": "Test Product",
+        "quantity": null,
+        "unit_price": 150.0,
+        "total": null
+      }
+    ],
+    "potential_issues": [
+      "VAT amount missing",
+      "Quantity is missing for line items",
+      "Total values for line items are missing.  Total amount does not match the sum of the unit prices.  315 + 150 = 465 != 647."
+    ]
+  },
+  "timestamp": "2026-02-17T15:37:44.930576",
+  "mode": "MOCK",
+  "marketplace_ready": false
+}

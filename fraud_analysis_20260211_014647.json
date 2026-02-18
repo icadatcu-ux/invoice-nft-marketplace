@@ -1,0 +1,153 @@
+{
+  "timestamp": "2026-02-11T01:46:47.596979",
+  "invoice": {
+    "supplier_name": "Company Name",
+    "invoice_number": "INV-001",
+    "date": "[DD/MM/YYYY]",
+    "total_amount": "$XXX",
+    "currency": "$",
+    "vat_amount": "$XX",
+    "line_items": [
+      {
+        "description": "Service / Product description",
+        "quantity": 1,
+        "unit_price": "$XXX",
+        "total": "$XXX"
+      }
+    ],
+    "potential_issues": [
+      "Date is missing specific values and is represented as a placeholder [DD/MM/YYYY]",
+      "Total Amount is represented by a placeholder $XXX and needs a specific value.",
+      "Unit Price is represented by a placeholder $XXX and needs a specific value.",
+      "Line item total is represented by a placeholder $XXX and needs a specific value.",
+      "Vat Amount is represented by a placeholder $XX and needs a specific value.",
+      "Subtotal is represented by a placeholder $XXX and needs a specific value.",
+      "Address of supplier and client is missing specific details.",
+      "Email of supplier and client is missing specific details.",
+      "VAT Number of Supplier is missing.",
+      "Due Date is missing specific values and is represented as a placeholder [DD/MM/YYYY]"
+    ]
+  },
+  "detected_issues": [
+    {
+      "type": "exact_duplicate",
+      "severity": "critical",
+      "match": {
+        "invoice_number": "INV-001",
+        "supplier_name": "Company Name",
+        "total_amount": "$XXX",
+        "currency": "$",
+        "date": "[DD/MM/YYYY]",
+        "document_hash": "a01e837219b8cf3f556f6c797736680426e61fb35f26980a194d39645b4c9bb9",
+        "transaction_hash": "0x6130316538333732313962386366336635353666366337393737333636383034",
+        "timestamp": "2026-02-11T01:45:36.656425",
+        "status": "pending",
+        "flags": []
+      },
+      "reason": "Duplicate invoice number: INV-001"
+    },
+    {
+      "type": "suspicious_duplicate",
+      "severity": "high",
+      "match": {
+        "invoice_number": "INV-001",
+        "supplier_name": "Company Name",
+        "total_amount": "$XXX",
+        "currency": "$",
+        "date": "[DD/MM/YYYY]",
+        "document_hash": "a01e837219b8cf3f556f6c797736680426e61fb35f26980a194d39645b4c9bb9",
+        "transaction_hash": "0x6130316538333732313962386366336635353666366337393737333636383034",
+        "timestamp": "2026-02-11T01:45:36.656425",
+        "status": "pending",
+        "flags": []
+      },
+      "reason": "Same supplier + amount within 30 days"
+    },
+    {
+      "type": "exact_duplicate",
+      "severity": "critical",
+      "match": {
+        "invoice_number": "INV-001",
+        "supplier_name": "Company Name",
+        "total_amount": "$XXX",
+        "currency": "$",
+        "date": "[DD/MM/YYYY]",
+        "document_hash": "a01e837219b8cf3f556f6c797736680426e61fb35f26980a194d39645b4c9bb9",
+        "transaction_hash": "0x6130316538333732313962386366336635353666366337393737333636383034",
+        "timestamp": "2026-02-11T01:46:08.934492",
+        "status": "pending",
+        "flags": []
+      },
+      "reason": "Duplicate invoice number: INV-001"
+    },
+    {
+      "type": "suspicious_duplicate",
+      "severity": "high",
+      "match": {
+        "invoice_number": "INV-001",
+        "supplier_name": "Company Name",
+        "total_amount": "$XXX",
+        "currency": "$",
+        "date": "[DD/MM/YYYY]",
+        "document_hash": "a01e837219b8cf3f556f6c797736680426e61fb35f26980a194d39645b4c9bb9",
+        "transaction_hash": "0x6130316538333732313962386366336635353666366337393737333636383034",
+        "timestamp": "2026-02-11T01:46:08.934492",
+        "status": "pending",
+        "flags": []
+      },
+      "reason": "Same supplier + amount within 30 days"
+    },
+    {
+      "type": "exact_duplicate",
+      "severity": "critical",
+      "match": {
+        "invoice_number": "INV-001",
+        "supplier_name": "Company Name",
+        "total_amount": "$XXX",
+        "currency": "$",
+        "date": "[DD/MM/YYYY]",
+        "document_hash": "a01e837219b8cf3f556f6c797736680426e61fb35f26980a194d39645b4c9bb9",
+        "transaction_hash": "0x6130316538333732313962386366336635353666366337393737333636383034",
+        "timestamp": "2026-02-11T01:46:45.932883",
+        "status": "pending",
+        "flags": []
+      },
+      "reason": "Duplicate invoice number: INV-001"
+    },
+    {
+      "type": "suspicious_duplicate",
+      "severity": "high",
+      "match": {
+        "invoice_number": "INV-001",
+        "supplier_name": "Company Name",
+        "total_amount": "$XXX",
+        "currency": "$",
+        "date": "[DD/MM/YYYY]",
+        "document_hash": "a01e837219b8cf3f556f6c797736680426e61fb35f26980a194d39645b4c9bb9",
+        "transaction_hash": "0x6130316538333732313962386366336635353666366337393737333636383034",
+        "timestamp": "2026-02-11T01:46:45.932883",
+        "status": "pending",
+        "flags": []
+      },
+      "reason": "Same supplier + amount within 30 days"
+    }
+  ],
+  "supplier_risk": {
+    "score": 0,
+    "level": "low",
+    "total_invoices": 3,
+    "flagged_invoices": 0
+  },
+  "ai_analysis": {
+    "additional_indicators": [
+      "The use of placeholders ([DD/MM/YYYY], $XXX, $XX) throughout the invoice indicates that this is an incomplete or template invoice, raising significant concerns about its authenticity and legitimacy.",
+      "Single line item on the invoice could suggest a lack of detail or potential for inflated pricing.",
+      "Missing supplier and client address and contact information makes it difficult to verify the legitimacy of the supplier and the transaction.",
+      "Missing VAT number for the supplier, especially if a VAT amount is claimed, is a major red flag."
+    ],
+    "fraud_probability": "high",
+    "recommended_action": "reject",
+    "explanation": "The invoice contains multiple critical red flags.  The use of placeholders for dates, amounts, and the missing supplier information are major concerns. The presence of duplicate invoice detections further strengthens the suspicion of fraudulent activity. The invoice should be rejected and the supplier investigated."
+  },
+  "total_issues": 6
+}

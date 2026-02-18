@@ -1,0 +1,33 @@
+{
+  "invoice_file": "sample_invoice.pdf",
+  "document_hash": "a01e837219b8cf3f556f6c797736680426e61fb35f26980a194d39645b4c9bb9",
+  "transaction_hash": "0x6130316538333732313962386366336635353666366337393737333636383034",
+  "contract_address": "MOCK_MODE",
+  "network": "BSC Testnet",
+  "analysis": {
+    "supplier_name": "Company Name",
+    "invoice_number": "INV-001",
+    "date": "[DD/MM/YYYY]",
+    "total_amount": "$XXX",
+    "currency": "$",
+    "vat_amount": "$XX",
+    "line_items": [
+      {
+        "description": "Service / Product description",
+        "quantity": 1,
+        "unit_price": "$XXX",
+        "total": "$XXX"
+      }
+    ],
+    "potential_issues": [
+      "Placeholder values detected (e.g., $XXX, [DD/MM/YYYY]) indicating missing or incomplete data.",
+      "VAT amount may not be applicable depending on the context, needs clarification based on location of supplier and client.",
+      "Due Date is missing, it has a placeholder value.",
+      "Supplier Address, City, Country, Email, VAT Number are missing placeholder values",
+      "Client Name, Company Name, Address, City, Country, Email are missing and contain placeholder values."
+    ]
+  },
+  "timestamp": "2026-02-17T15:18:54.593443",
+  "mode": "MOCK",
+  "marketplace_ready": false
+}
