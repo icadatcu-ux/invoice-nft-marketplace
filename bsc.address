@@ -1,0 +1,24 @@
+Invoice Registry Contract
+==========================
+
+Contract Address: 0xfde796D7E133A61636eD51f1e2F145C35b28617b
+Network: BSC Testnet (Chain ID: 97)
+Deployed: February 12, 2026
+
+Block Explorer:
+https://testnet.bscscan.com/address/0xfde796D7E133A61636eD51f1e2F145C35b28617b
+
+Example Transactions (Approved Invoices):
+- https://testnet.bscscan.com/tx/0x4fb095d2cb9d30c1bbf67e7910acaf26df28a96f9c4e3df57dbdb5b0d4e7a27f
+- https://testnet.bscscan.com/tx/0x34ba35a6880bcc7c8b92f3dbb5d3b705cf165f53f628a627d4563dde0c1aaf37
+- https://testnet.bscscan.com/tx/0x9d8034e0daea8d3cbf032ed4bd461de38b9912343e850b5dfc6e26b04b221106
+
+Note: Only approved invoices (passing fraud detection) are registered onchain.
+Rejected invoices are filtered by AI and never reach the blockchain.
+
+Invoice NFT Contract
+====================
+
+Status: Designed and tested in mock mode
+Contract: InvoiceNFT.sol (included in repository)
+Deployment: Ready for mainnet after hackathon validation
